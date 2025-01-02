@@ -1,0 +1,17 @@
+.split-screen {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.sidebar {
+  width: 15vw; /* Fixed width for the sidebar */
+  background-color: #2c3e50;
+  color: white;
+  padding: 2vw;
+}
+
+.main-content {
+  flex-grow: 1; /* Take up the remaining space */
+  padding: 20px;
+  background-color: #ecf0f1;
+}
