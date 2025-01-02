@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Adding new page
+
+To add a new page e.g. Foo, simply:
+
+- create a Foo.js in src/pages/
+- add the rerouting entry in App.js
+- add the correspoinding .svg icon
+- add the entry in Sidebar.js
