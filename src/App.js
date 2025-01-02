@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar"
 
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Contact from "./pages/Contact"
+import Events from "./pages/Events"
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           {/* Route to the correct pages */}
           <Route path="/Home" element={<Home/>} />
           <Route path="/About" element={<About/>} />
-          <Route path="/Contact" element={<Contact/>} />
+          <Route path="/Events" element={<Events/>} />
 
           <Route path="/" element={<Navigate to="/Home" />} />
           {/* Reroute invalid pages */}
