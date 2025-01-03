@@ -77,3 +77,7 @@ To add a new page e.g. Foo, simply:
 - add the rerouting entry in App.js
 - add the correspoinding .svg icon
 - add the entry in Sidebar.js
+
+Just add display:"flex" for everything
+justifyContent = horizontal position
+alignContent = veritical position

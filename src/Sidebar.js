@@ -25,7 +25,15 @@ function Sidebar(){
 
 
     return <>{visible ? 
-        <div className="sidebar" style={{width:"200px", position:"relative", padding:"30px", backgroundColor:"#304b5b"}}>
+        <div className="sidebar" style={{
+            width:"200px",
+            position:"relative",
+            padding:"30px",
+            backgroundColor:"#304b5b",
+            color:"white",
+            wordWrap:"break-word",
+            flexShrink:"0",
+        }}>
             <img style={{width:"100%", objectFit:"contain", backgroundColor:"white"}} src="/logo.png" alt="logo"/>
 
             <h1>AIML Club</h1>
@@ -49,7 +57,7 @@ function Sidebar(){
             </button>
         </div>
         :
-        <div className="sidebar" style={{width:"40px", position:"relative", backgroundColor:"#304b5b"}}>
+        <div className="sidebar" style={{width:"40px", position:"relative", backgroundColor:"#304b5b", flexShrink:"0",}}>
             <button onClick={()=>setVisible(!visible)}
                 style={{width:"100%",
                         height:"100%",

@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import Sidebar from "./Sidebar"
@@ -10,10 +10,17 @@ import Events from "./pages/Events"
 function App() {
   return (
     <>
-    <div className="split-screen">
+    <div style={{display:"flex", height:"100vh"}}>
       <Sidebar />
       
-      <div className="main-content">
+      <div className="main-content" style={{
+        flexGrow:"1", /* Take up the remaining space */
+        // padding:"20px",
+        backgroundColor:"#e6ebec",
+        overflowX:"hidden",
+        overflowY:"auto",
+      }}>
+        
         {/* <h1>Main Content</h1> */}
         <Routes>
           {/* Route to the correct pages */}
