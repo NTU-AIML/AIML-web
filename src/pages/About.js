@@ -11,9 +11,6 @@ function About(){
         <p style={{fontSize:"1.2em"}}>
             Website: [Insert links]
         </p>
-        <p style={{fontSize:"1.2em"}}>
-            Instagram: [Insert links]
-        </p>
         
     </div>
 }
