@@ -21,6 +21,11 @@ function Bar({backgroundColor, children, imgPath, swapPos, height}){
         justifyContent: "center",
         alignItems: "center",
     }
+    const imgContainerStyle = {
+        margin:"0",
+        width:"50%",
+        overflow:"hidden",
+    }
     const imgStyle = {
         // width:"50%",
         height:"100%",
@@ -30,6 +35,13 @@ function Bar({backgroundColor, children, imgPath, swapPos, height}){
         margin:"0",
     }
 
+    if(window.innerWidth <= 600){
+        cardStyle.flexDirection = "column"
+        imgStyle.width = "100%"
+        imgContainerStyle.width = "100%"
+        textStyle.width = "90%"
+        // imgStyle.height = "50%"
+    }
     // return <div style={cardStyle}>
     //     <div style={textStyle}>{children}</div>
     //     <img style={imgStyle} src={imgPath} alt={"event "+title}/>
@@ -39,12 +51,14 @@ function Bar({backgroundColor, children, imgPath, swapPos, height}){
         {swapPos ? 
         <div style={textStyle}>{children}</div>
         :
-        <div style={{margin:"0", width:"50%", overflow:"hidden"}}>
+        <div style={imgContainerStyle}>
             <img style={imgStyle} src={imgPath} alt="pic"/>
         </div>
         }
         {swapPos ?
-        <img style={imgStyle} src={imgPath} alt="pic"/>
+        <div style={imgContainerStyle}>
+            <img style={imgStyle} src={imgPath} alt="pic"/>
+        </div>
         :
         <div style={textStyle}>{children}</div>
         }
