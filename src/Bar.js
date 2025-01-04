@@ -23,22 +23,29 @@ function Bar({backgroundColor, children, imgPath, swapPos, height}){
     }
     const imgContainerStyle = {
         margin:"0",
+        height:"100%",
         width:"50%",
         overflow:"hidden",
+        display:"flex",
+        justifyContent:"center",
+        alignContent:"center",
     }
     const imgStyle = {
-        // width:"50%",
         height:"100%",
+        width:"100%",
         flexShrink:"0",
         objectFit:"cover",
+        objectPosition:"center",
         padding:"0",
         margin:"0",
     }
 
     if(window.innerWidth <= 600){
         cardStyle.flexDirection = "column"
+        cardStyle.height=""
         imgStyle.width = "100%"
         imgContainerStyle.width = "100%"
+        imgContainerStyle.height = ""
         textStyle.width = "90%"
         // imgStyle.height = "50%"
     }

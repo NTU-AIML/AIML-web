@@ -18,8 +18,7 @@ function Home(){
             NTU Artificial Intelligence & Machine Learning Club
         </h1>
 
-
-        <Bar backgroundColor="rgb(217, 217, 217)" imgPath="/fumos.png" swapPos={true}>
+        <Bar backgroundColor="rgb(217, 217, 217)" imgPath="/Home1.png" swapPos={true}>
             <h1 style={{textAlign:"center"}}>What Is The AIML Club?</h1>
             <p style={{fontSize:"1.4em", textAlign:"center"}}>
                 A vibrant community for enthusiasts and learners passionate about Artificial Intelligence and Machine Learning.
@@ -83,7 +82,7 @@ function Home(){
             </div>
         </div>
 
-        <Bar backgroundColor="rgb(255, 255, 255)" imgPath="fumos.png" style={{padding:"10px"}}>
+        <Bar backgroundColor="rgb(255, 255, 255)" imgPath="/Home2.png" style={{padding:"10px", height:"30px"}}>
             <h1 style={{textAlign:"center"}}>What We Do</h1>
             <p style={{fontSize:"1.4em", textAlign:"center"}}>
                 The AIML Club hosts a variety of events and initiatives tailored to different levels of expertise.
@@ -139,7 +138,7 @@ function Home(){
             
         </div>
 
-        <img style={{height:"100%", objectFit:"cover"}} src="/fumos.png" alt="pic"/>
+        <img style={{height:"300px", objectFit:"cover"}} src="/Home3.png" alt="pic"/>
         
     </div>
 }
