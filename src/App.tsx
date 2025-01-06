@@ -4,9 +4,9 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Sidebar from "./Sidebar"
 
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Events from "./pages/Events"
+import Home from "./Home"
+import About from "./About"
+import Events from "./Events"
 
 function App() {
   return (
