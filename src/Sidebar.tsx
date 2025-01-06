@@ -39,7 +39,7 @@ function Sidebar(){
         }}>
             <img style={{width:"100%", objectFit:"contain", backgroundColor:"white"}} src="/logo.png" alt="logo"/>
 
-            <h1>AIML Club</h1>
+            <h1 style={{fontWeight:"bold", fontSize:"1.6em"}}>AIML Club</h1>
             
             <SidebarLink target="Home" />
             <SidebarLink target="Events" />
