@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react"
-import Bar from "./Bar"
+// import Bar from "./Bar"
 
 import { Card, CardContent } from "./components/ui/card"
 import {
@@ -11,6 +11,25 @@ import {
 } from "./components/ui/carousel"
 
 
+type eventCardProp = {
+    key: string,
+    title: string,
+    children?: any,
+}
+
+function EventCard({key, title, children}: eventCardProp){
+    return <CarouselItem key={key} style={{display:"flex", justifyContent:"center"}}>
+        <Card style={{width:"80%"}}>
+            <CardContent style={{display:"flex", flexDirection:"column", alignContent:"center", justifyContent:"center'"}}>
+                <h1 style={{textAlign:"center", fontSize:"2em", fontWeight:"bold", padding:"10px", wordBreak:"break-word"}}>{title}</h1>
+                <img src="fumos.png" style={{width:"100%"}} alt="event pic"/>
+                <p style={{textAlign:"center", fontSize:"1.2em", padding:"10px"}}>
+                    {children}
+                </p>
+            </CardContent>
+        </Card>
+    </CarouselItem>
+}
 
 function Events(){
     return <div>
@@ -28,23 +47,17 @@ function Events(){
 
         
 
-        <Carousel className="" style={{width:"100%"}}>
+        <Carousel style={{margin:window.innerWidth<=600 ? "0px" : "60px"}}>
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="basis-1/2" style={{width:"50%"}}>
-                    <div className="">
-                    <Card>
-                        <CardContent style={{display:"flex", flexDirection:"column", alignContent:"center", justifyContent:"center'"}}>
-                            <h1 style={{textAlign:"center", fontSize:"2em", fontWeight:"bold"}}>Event title</h1>
-                            <img src="fumos.png" style={{width:"100%", margin:"10px"}}/>
-                            <p style={{textAlign:"center", fontSize:"1.2em"}}>
-                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                            </p>
-                        </CardContent>
-                    </Card>
-                    </div>
-                </CarouselItem>
-                ))}
+                
+                <EventCard key="back2school" title="Back2School">
+                    Lorem Ipsum
+                </EventCard>
+
+                <EventCard key="cactus" title="CACTUS">
+                    Lorem Ipsum
+                </EventCard>
+
             </CarouselContent>
 
             <CarouselPrevious />
