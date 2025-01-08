@@ -44,6 +44,7 @@ function Sidebar(){
             <SidebarLink target="Home" />
             <SidebarLink target="Events" />
             <SidebarLink target="About" />
+            <SidebarLink target="Cactus" />
             
 
             <button onClick={()=>setVisible(!visible)}

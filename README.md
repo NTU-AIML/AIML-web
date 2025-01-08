@@ -81,3 +81,6 @@ To add a new page e.g. Foo, simply:
 Just add display:"flex" for everything
 justifyContent = horizontal position
 alignContent = veritical position
+
+
+Icon source: https://free-icons.github.io/free-icons/
