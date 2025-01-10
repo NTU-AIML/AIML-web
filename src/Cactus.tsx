@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// import { useState, useEffect } from "react";
 
 import Bar from "./Bar"
 // import Card from "./Card"
@@ -15,6 +16,8 @@ import { Button } from "./components/ui/button"
 
 
 function Cactus(){
+    
+
     return <div style={{display:"flex", flexDirection:"column", padding:"0px", margin:"0px"}}>
 
         <h1 style={{

@@ -35,6 +35,8 @@ function EventCard({key, title, children}: eventCardProp){
 }
 
 function Events(){
+    
+  
     return <div>
         <h1 style={{
             width:"100%",

@@ -1,8 +1,8 @@
 
 // import './App.css';
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 
-import Sidebar from "./Sidebar"
+import Navbar from "./Navbar"
 
 import Home from "./Home"
 import About from "./About"
@@ -10,13 +10,14 @@ import Events from "./Events"
 import Cactus from "./Cactus"
 
 
-
 function App() {
   return (
     <>
-    <div style={{display:"flex", height:"100vh"}}>
+    <div style={{display:"", height:"100vh"}}>
       
-      <Sidebar />
+      <Navbar />
+      
+
       
       <div className="main-content" style={{
         flexGrow:"1", /* Take up the remaining space */

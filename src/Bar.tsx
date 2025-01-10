@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 type props = {
     children?: any,
     backgroundColor?: string,
@@ -8,6 +10,20 @@ type props = {
 };
 
 function Bar({backgroundColor, children, imgPath, swapPos, height}: props){
+    
+    const [width, setWidth] = useState(0);
+    useEffect(() => {
+        const updateWindowDimensions = () => {
+            const newWidth = window.innerWidth;
+            setWidth(newWidth);
+            // console.log("updating height");
+        };
+        window.addEventListener("resize", updateWindowDimensions);
+        window.addEventListener("resize", updateWindowDimensions);
+        updateWindowDimensions()
+        return () => window.removeEventListener("resize", updateWindowDimensions);
+    }, []);
+
     const cardStyle: React.CSSProperties =  {
         display:"flex",
         flexDirection:"row",
@@ -49,15 +65,24 @@ function Bar({backgroundColor, children, imgPath, swapPos, height}: props){
         margin:"0",
     }
 
-    if(window.innerWidth <= 600){
-        cardStyle.flexDirection = "column"
-        cardStyle.height=""
-        imgStyle.width = "100%"
-        imgContainerStyle.width = "100%"
-        imgContainerStyle.height = ""
-        textStyle.width = "90%"
-        // imgStyle.height = "50%"
-    }
+    // useEffect(()=>{
+        if(width <= 600){
+            cardStyle.flexDirection = "column"
+            cardStyle.height=""
+            imgContainerStyle.width = "100%"
+            imgContainerStyle.height = ""
+            textStyle.width = "90%"
+            // imgStyle.height = "50%"
+        }
+    //     else{
+    //         cardStyle.flexDirection = "row"
+    //         cardStyle.height=height
+    //         imgContainerStyle.width = "50%"
+    //         imgContainerStyle.height = "100%"
+    //         textStyle.width = "50%"
+    //     }
+    // }, [width]);
+    
     // return <div style={cardStyle}>
     //     <div style={textStyle}>{children}</div>
     //     <img style={imgStyle} src={imgPath} alt={"event "+title}/>
