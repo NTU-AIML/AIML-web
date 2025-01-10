@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 // import Bar from "./Bar"
 import { Link } from "react-router-dom";
 
@@ -21,11 +21,24 @@ type eventCardProp = {
 }
 
 function EventCard({key, title, children}: eventCardProp){
+    const [width, setWidth] = useState(0);
+            useEffect(() => {
+                const updateWindowDimensions = () => {
+                const newWidth = window.innerWidth;
+                setWidth(newWidth);
+                // console.log("updating height");
+            };
+            window.addEventListener("resize", updateWindowDimensions);
+            window.addEventListener("resize", updateWindowDimensions);
+            updateWindowDimensions()
+            return () => window.removeEventListener("resize", updateWindowDimensions);
+        }, []);
+
     return <CarouselItem key={key} style={{display:"flex", justifyContent:"center"}}>
-        <Card style={{width: window.innerWidth<=600 ? "90%":"100%"}}>
-            <CardContent style={{display:"flex", flexDirection:"column", alignContent:"center", justifyContent:"center'"}}>
+        <Card style={{width: width<=600 ? "90%":"100%", backgroundColor:"white", height:"100%"}}>
+            <CardContent style={{display:"flex", flexDirection:"column", alignContent:"top", justifyContent:"center'"}}>
                 <h1 style={{textAlign:"center", fontSize:"2em", fontWeight:"bold", padding:"10px", wordBreak:"break-word"}}>{title}</h1>
-                <img src="fumos.png" style={{width:"100%"}} alt="event pic"/>
+                <img src="fumos.png" style={{height:"80%"}} alt="event pic"/>
                 <p style={{textAlign:"center", fontSize:"1.2em", padding:"10px"}}>
                     {children}
                 </p>
@@ -35,7 +48,6 @@ function EventCard({key, title, children}: eventCardProp){
 }
 
 function Events(){
-    
   
     return <div>
         <h1 style={{
@@ -53,7 +65,7 @@ function Events(){
 
         
 
-        <Carousel style={{margin: window.innerWidth<=600 ? "0px" : "60px"}}>
+        <Carousel style={{margin:"60px"}}>
             <CarouselContent>
                 
                 <EventCard key="back2school" title="Back2School">
@@ -80,7 +92,7 @@ function Events(){
         </Carousel>        
 
         <p style={{textAlign:"center"}}>
-            Slide the card to the left to see other events.
+            More events coming up soon!
         </p>
 
         {/* <Bar imgPath="/Event1.png" backgroundColor="#d9d9d9" height="auto" swapPos={false}>

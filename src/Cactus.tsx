@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Bar from "./Bar"
 // import Card from "./Card"
@@ -13,6 +13,26 @@ import {
   } from "./components/ui/card"
 
 import { Button } from "./components/ui/button"
+
+type FAQCardProps = {
+    children?: any,
+    question: string,
+}
+
+function FAQCard({children, question} : FAQCardProps){
+    const [visible, setVisible] = useState(false);
+    return <Card style={{margin:"10px", backgroundColor:"white"}} onClick={()=>{setVisible(!visible)}}>
+        <p style={{padding:"10px", fontWeight:"bold", fontSize:"1.2em"}}>
+            {question}
+        </p>
+        { !visible ? <></> :
+            <p style={{padding:"10px", fontSize:"1.2em"}}>
+                {children}
+            </p>
+        }
+    </Card>
+}
+
 
 
 function Cactus(){
@@ -34,7 +54,9 @@ function Cactus(){
         </h1>
 
         <Bar backgroundColor="rgb(217, 217, 217)" imgPath="/cactus.jpg" swapPos={true} height="auto">
-            <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em"}}>What is CACTUS?</h1>
+            <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em"}}>
+                What is CACTUS?
+            </h1>
             <p style={{fontSize:"1.4em", textAlign:"center", padding:"10px"}}>
                 <b>CCDS AI Competition Team for Undergraduate Student</b> (CACTUS) is a program designed to help students succeed in AI competitions.
             </p>
@@ -43,12 +65,18 @@ function Cactus(){
             </p>
         </Bar>
 
-        <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="promotional video"
-            style={{height:"", width: "100%", aspectRatio: "16 / 9"}}
-            allowFullScreen
-        />
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"white"}}>
+            <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em", margin:"10px"}}>
+                Promotional Video
+            </h1>
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="promotional video"
+                style={{height:"", width: "90%", aspectRatio: "16 / 9", margin:"10px"}}
+                allowFullScreen
+            />
+        </div>
+        
 
 
         <div style={{margin:"20px"}}>
@@ -136,33 +164,19 @@ function Cactus(){
         <div style={{padding:"10px"}}>
             <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em"}}>FAQ</h1>
 
-            <Card style={{margin:"10px"}}>
-                <p style={{padding:"10px", fontWeight:"bold", fontSize:"1.2em"}}>
-                    my question??
-                </p>
-                <p style={{padding:"10px", fontSize:"1.2em"}}>
-                    my answer
-                </p>
-            </Card>
+            <FAQCard question="My question">
+                my answer 1234
+            </FAQCard>
             
-            <Card style={{margin:"10px"}}>
-                <p style={{padding:"10px", fontWeight:"bold", fontSize:"1.2em"}}>
-                    my question??
-                </p>
-                <p style={{padding:"10px", fontSize:"1.2em"}}>
-                    my answer
-                </p>
-            </Card>
-
-            <Card style={{margin:"10px"}}>
-                <p style={{padding:"10px", fontWeight:"bold", fontSize:"1.2em"}}>
-                    my question??
-                </p>
-                <p style={{padding:"10px", fontSize:"1.2em"}}>
-                    my answer
-                </p>
-            </Card>
+            <FAQCard question="My question">
+                my answer 5678
+            </FAQCard>
+            
+            <FAQCard question="My question">
+                my answer 90123
+            </FAQCard>
         </div>
+
 
         <img style={{height:"300px", objectFit:"cover"}} src="/Home3.png" alt="pic"/>
         
