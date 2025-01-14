@@ -69,7 +69,7 @@ function Navbar(){
 
                 <NavbarLink target="Home"/>
                 {/* <NavbarLink target="Events"/> */}
-                {/* <NavbarLink target="About"/> */}
+                {/* <NavbarLink target="About"/> */}    
                 <NavbarLink target="Cactus"/>
             </NavigationMenuItem>
         </NavigationMenuList>
