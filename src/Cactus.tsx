@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 import Bar from "./Bar"
 // import Card from "./Card"
@@ -14,24 +14,24 @@ import {
 
 import { Button } from "./components/ui/button"
 
-type FAQCardProps = {
-    children?: any,
-    question: string,
-}
+// type FAQCardProps = {
+//     children?: any,
+//     question: string,
+// }
 
-function FAQCard({children, question} : FAQCardProps){
-    const [visible, setVisible] = useState(false);
-    return <Card style={{margin:"10px", backgroundColor:"white"}} onClick={()=>{setVisible(!visible)}}>
-        <p style={{padding:"10px", fontWeight:"bold", fontSize:"1.2em"}}>
-            {question}
-        </p>
-        { !visible ? <></> :
-            <p style={{padding:"10px", fontSize:"1.2em"}}>
-                {children}
-            </p>
-        }
-    </Card>
-}
+// function FAQCard({children, question} : FAQCardProps){
+//     const [visible, setVisible] = useState(false);
+//     return <Card style={{margin:"10px", backgroundColor:"white"}} onClick={()=>{setVisible(!visible)}}>
+//         <p style={{padding:"10px", fontWeight:"bold", fontSize:"1.2em"}}>
+//             {question}
+//         </p>
+//         { !visible ? <></> :
+//             <p style={{padding:"10px", fontSize:"1.2em"}}>
+//                 {children}
+//             </p>
+//         }
+//     </Card>
+// }
 
 
 
@@ -65,7 +65,7 @@ function Cactus(){
             </p>
         </Bar>
 
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"white"}}>
+        {/* <div style={{display:"flex", flexDirection:"column", alignItems:"center", backgroundColor:"white"}}>
             <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em", margin:"10px"}}>
                 Promotional Video
             </h1>
@@ -75,7 +75,7 @@ function Cactus(){
                 style={{height:"", width: "90%", aspectRatio: "16 / 9", margin:"10px"}}
                 allowFullScreen
             />
-        </div>
+        </div> */}
         
 
 
@@ -121,12 +121,12 @@ function Cactus(){
             </div>
         </div>
 
-        <Bar backgroundColor="rgb(255, 255, 255)" imgPath="/cactus2.jpg" style={{padding:"20px", height:"30px"}}>
+        <Bar backgroundColor="rgb(255, 255, 255)" imgPath="/cactus2.jpg" style={{padding:"40px", height:"30px"}}>
             <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em"}}>Recruitment</h1>
             <div style={{fontSize:"1.4em", textAlign:"left", padding:"10px"}}>
                 {/* <p>What’s next?</p> */}
                 <p>
-                    We are excited to announce that recruitment for CACTUS opens from <b>13 – 20 January 2025</b>!
+                    We are excited to announce that recruitment for CACTUS opens from <b>15 – 23 January 2025</b>!
                 </p>
 
                 <p style={{margin:"10px"}}></p>
@@ -135,15 +135,16 @@ function Cactus(){
                     We’re looking for experienced and competent <b>Team Leaders</b> to spearhead teams in AI competitions.
                     As a Team Leader, your responsibilities include:
                 </p>
-                <ul style={{listStyle:"inside"}}>
-                    <li>Leading your team to compete in an approved AI competition.</li>
-                    <li>Recruiting your own team members.</li>
-                    <li>Coordinating with committee members to request computing resources and training from professors and industry experts.</li>
-                </ul>
+                <ol style={{listStyle:"inside"}}>
+                    <li>Lead a team to compete in AI competitions</li>
+                    <li>Recruit team members for AI competitions</li>
+                    <li>Handle and request compute resources</li>
+                    <li>Handle and request for relevant training from professors and industry experts</li>
+                </ol>
 
             </div>
 
-            <Link to="/idk" style={{textDecoration:"none", color:"white", display:"flex", justifyContent:"center", margin:"10px"}}>
+            <Link to="https://forms.office.com/r/uY83afE3W3" style={{textDecoration:"none", color:"white", display:"flex", justifyContent:"center", margin:"10px"}}>
                 <Button style={{background:"#304b5b", borderRadius:"10px", padding:"25px", height:"fit-content"}}>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" height="100%" fill="currentColor" viewBox="0 0 512 512">
@@ -161,7 +162,7 @@ function Cactus(){
         </Bar>
     
 
-        <div style={{padding:"10px"}}>
+        {/* <div style={{padding:"10px"}}>
             <h1 style={{textAlign:"center", wordBreak:"break-word", fontWeight:"bold", fontSize:"2em"}}>FAQ</h1>
 
             <FAQCard question="My question">
@@ -175,7 +176,7 @@ function Cactus(){
             <FAQCard question="My question">
                 my answer 90123
             </FAQCard>
-        </div>
+        </div> */}
 
 
         <img style={{height:"300px", objectFit:"cover"}} src="/Home3.png" alt="pic"/>
