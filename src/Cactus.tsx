@@ -126,7 +126,7 @@ function Cactus(){
             <div style={{fontSize:"1.4em", textAlign:"left", padding:"10px"}}>
                 {/* <p>What’s next?</p> */}
                 <p>
-                    We are excited to announce that recruitment for CACTUS opens from <b>15 – 23 January 2025</b>!
+                    We are excited to announce that recruitment for CACTUS opens from <b>27 Jan - 4 Feb 2025</b>!
                 </p>
 
                 <p style={{margin:"10px"}}></p>
