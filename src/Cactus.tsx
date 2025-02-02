@@ -36,7 +36,7 @@ function Cactus() {
       {/* What is CACTUS Section */}
       <Bar
         backgroundColor="rgb(217, 217, 217)"
-        imgPath="/cactus.jpg"
+        imgPath="/cactus.png"
         swapPos={true}
         height="auto"
       >
